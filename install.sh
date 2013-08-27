@@ -9,7 +9,7 @@
 # Variable definitions
 DIR=$(cd `dirname $0` && pwd)
 NAME="Webmin"
-$SLUG="webmin"
+SLUG="webmin"
 VER="1.650"
 DEPENDENCIES=("dialog")
 TMP="/tmp/$NAME"
