@@ -1,5 +1,5 @@
-Webmin install
-==============
+Webmin install script & plugins
+===============================
 
 Install Webmin on several Linux distributions with one script
 
