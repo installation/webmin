@@ -168,9 +168,9 @@ download()
 ## Cleanup files
 cleanup()
 {
-	find $TMP/* -not -name '*.log' | xargs rm -rf
+	cd $TMP 2> /dev/null || return 1
+	find * -not -name '*.log' | xargs rm -rf
 }
-
 
 # Checking dependencies
 for dep in ${DEPENDENCIES[@]}; do
@@ -199,6 +199,9 @@ else
 fi
 
 install "webmin"
+
+e "Cleaning up"
+cleanup
 
 if [ -s $ERROR_LOG ]; then
 	e "Error log is not empty. Please check $ERROR_LOG for further details." 31

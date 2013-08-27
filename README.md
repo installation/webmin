@@ -1,9 +1,9 @@
+Webmin
+======
+
 Webmin install script
-=====================
 
-Install Webmin on several Linux distributions with one script
-
-* Installs all dependencies using apt or yum
+Installs all dependencies using apt or yum
 
 Tested on:
 * CentOS 5.8/6.4
