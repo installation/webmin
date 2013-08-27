@@ -93,16 +93,6 @@ else
 	ee "No package manager found."
 fi
 
-## Check for init system (update-rc.d or chkconfig)
-e "Checking for init system..."
-if [ `which update-rc.d 2> /dev/null` ]; then
-	init="$(which update-rc.d)"
-elif [ `which chkconfig 2> /dev/null` ]; then
-	init="$(which chkconfig) --add"
-else
-	ee "Init system not found, service not started!"
-fi
-
 
 # Function definitions
 
@@ -129,19 +119,6 @@ download()
 		return 1
 	else
 		$download "$1" >> $INSTALL_LOG 2>> $ERROR_LOG || ee "Error during download $2"
-	fi
-
-	return 0
-}
-
-## Install init script
-init()
-{
-	if [ -z "$1" ]; then
-		e "No init script given" 31
-		return 1
-	else
-		$init "$1" >> $INSTALL_LOG 2>> $ERROR_LOG || ee "Error during init"
 	fi
 
 	return 0
@@ -181,7 +158,6 @@ if [ `which apt-get 2> /dev/null` ]; then
 
 	apt-key add jcameron-key.asc
 	apt-get update &> /dev/null
-	install webmin
 elif [ `which yum 2> /dev/null` ]; then
 echo "[Webmin]
 name=Webmin Distribution Neutral
