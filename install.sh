@@ -146,7 +146,7 @@ if [ `which apt-get 2> /dev/null` ]; then
 	echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list.d/webmin.list
 	echo "deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib" >> /etc/apt/sources.list.d/webmin.list
 
-	apt-key add jcameron-key.asc
+	apt-key add jcameron-key.asc >> $INSTALL_LOG 2>> $ERROR_LOG
 	apt-get update &> /dev/null
 elif [ `which yum 2> /dev/null` ]; then
 echo "[Webmin]
@@ -154,7 +154,7 @@ name=Webmin Distribution Neutral
 #baseurl=http://download.webmin.com/download/yum
 mirrorlist=http://download.webmin.com/download/yum/mirrorlist
 enabled=1" >> /etc/yum.repos.d/webmin.repo
-	rpm --import jcameron-key.asc
+	rpm --import jcameron-key.asc >> $INSTALL_LOG 2>> $ERROR_LOG
 else
 	ee "Your distribution is not supported!"
 fi
