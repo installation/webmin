@@ -1,5 +1,5 @@
-Webmin install script & plugins
-===============================
+ConfigServer Security & Firewall install
+========================================
 
 Install Webmin on several Linux distributions with one script
 
@@ -14,12 +14,6 @@ Tested on:
 Default temp dir is ````/tmp/Webmin````, this can be changed in install script.
 
 By default, the installer logs into ````$TMP/install.log```` and ````$TMP/error.log````. Check these for further info about the installation process.
-
-## Dependencies
-* Package manager (apt or yum)
-* HTTP Client (curl, wget or fetch)
-
-Dependencies will be installed during the progress, but installing them on your own is advised.
 
 ## Installation
 
