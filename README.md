@@ -23,8 +23,6 @@ Dependencies will be installed during the progress, but installing them on your 
 
 ## Installation
 
-There are several ways to install Webmin
-
 ### Online installation
 
 Clone this repository and run ````install.sh````
@@ -33,7 +31,7 @@ OR
 
 Just download ````install.sh```` and run it.
 
-### Offline installation
+### Install from package
 
 Download the appropriate package and install it with your package manager depending on your distribution:
 
@@ -52,6 +50,8 @@ If Debian complains about missing dependencies, install them with the command:
 [Webmin RPM package](http://prdownloads.sourceforge.net/webadmin/webmin-1.650-1.noarch.rpm)
 
 ````rpm -U webmin-1.650-1.noarch.rpm````
+
+This way you can install Supervisor on any machine even without internet connection. Make sure that every dependency is installed.
 
 ### Manual Installation
 [Follow these instructions](http://www.webmin.com/tgz.html)
