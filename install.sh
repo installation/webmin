@@ -11,7 +11,7 @@ DIR=$(cd `dirname $0` && pwd)
 NAME="Webmin"
 SLUG="webmin"
 VER="1.650"
-DEPENDENCIES=("dialog")
+DEPENDENCIES=("python")
 TMP="/tmp/$NAME"
 INSTALL_LOG="$TMP/install.log"
 ERROR_LOG="$TMP/error.log"
@@ -186,17 +186,6 @@ init()
 	fi
 
 	return 0
-}
-
-## Show progressbar
-progress()
-{
-	local progress=${1:-0}
-	local gauge="${2:-Please wait}"
-	local title="${3:-Installation progress}"
-
-	echo $progress | dialog --backtitle "Installing $NAME $VER" \
-	 --title "$title" --gauge "$gauge" 7 70 0
 }
 
 ## Cleanup files
