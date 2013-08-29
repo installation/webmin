@@ -229,7 +229,6 @@ fi
 
 install "webmin"
 
-e "Cleaning up"
 cleanup
 
 if [ -s $ERROR_LOG ]; then
