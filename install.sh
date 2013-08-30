@@ -12,7 +12,7 @@ NAME="Webmin"
 SLUG="webmin"
 VER="1.650"
 DEPENDENCIES=("python")
-TMP="/tmp/$NAME"
+TMP="/tmp/$SLUG"
 INSTALL_LOG="$TMP/install.log"
 ERROR_LOG="$TMP/error.log"
 
