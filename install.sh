@@ -18,7 +18,7 @@ ERROR_LOG="$TMP/error.log"
 
 # Cleaning up
 rm -rf $TMP
-mkdir -p $TMP
+mkdir -pr $TMP
 cd $TMP
 chmod 777 $TMP
 
